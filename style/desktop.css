@@ -160,7 +160,16 @@ footer #socials a img:hover {
     padding-top: 4vh;
 }
 
-#episodes ul li #textWrapper #customPlayer {
+#episodes ul li img {
+    width: 18vw;
+    height: 18vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 1%;
+    text-align: center;
+}
+
+#customPlayer {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -174,34 +183,33 @@ footer #socials a img:hover {
     text-align: center;
 }
 
-#episodes ul li #textWrapper #customPlayer p {
+#customPlayer p {
     margin: 0;
 }
 
-#episodes ul li #textWrapper #customPlayer p:nth-of-type(1) {
+#customPlayer p:nth-of-type(1) {
     flex: 1;
     font-weight: bolder;
     font-size: larger;
     cursor: pointer;
 }
 
-#episodes ul li #textWrapper #customPlayer p:nth-of-type(2) {
+#customPlayer p:nth-of-type(2) {
     flex: 1;
     font-size: larger;
     cursor: pointer;
 }
 
-#episodes ul li #textWrapper #customPlayer p:nth-of-type(3) {
+#customPlayer p:nth-of-type(3) {
     flex: 1;
     font-weight: bolder;
     font-size: larger;
     cursor: pointer;
 }
 
-#episodes ul li #textWrapper #customPlayer div {
+#customPlayer div {
     flex: 12;
     text-align: start;
-    background-color: #cacaca;
     margin-left: 1vw;
     margin-right: 1vw;
     border-radius: .7vw;
@@ -211,27 +219,47 @@ footer #socials a img:hover {
     align-items: center;
 }
 
-#episodes ul li #textWrapper #customPlayer div span:first-of-type {
+#customPlayer div input {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #cacaca;
+    height: .7rem;
+    border-radius: .7vw;
+}
+
+#customPlayer div input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: .9rem;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    background: #111111;
+    border-radius: 50%;
+    border: 0;
+}
+
+#customPlayer .sliderArea {
+    position: relative;
+    width: 50%;
+    background-color: #212121;
+    border-radius: 50%;
+    height: .9rem;
+}
+
+#customPlayer div span:first-of-type {
     flex: .2;
     background-color: black;
     height: .95rem;
     border-radius: .7vw;
 }
 
-#episodes ul li #textWrapper #customPlayer div span:last-of-type {
+#customPlayer div span:last-of-type {
     flex: .8;
 }
 
-#episodes ul li #textWrapper #customPlayer p:nth-of-type(4) {
+#customPlayer p:nth-of-type(4) {
     flex: 1;
-}
-
-#episodes ul li img {
-    width: 18vw;
-    height: 18vw;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    padding: 1%;
 }
 
 #about {
