@@ -36,15 +36,15 @@
                     <p>Episode 1 - YouTube</p>
                     <p>Join us as we discuss diffrent aspects of YouTube, like their history and their role in modern
                         society as a media giant with a practical monopoly.</p>
-                    <audio src="assets/tracks/episode1.mp3">Sorry, your browser doesn't support this feature
+                    <audio controls src="assets/tracks/episode1.mp3">Sorry, your browser doesn't support this feature
                         (audio
                         tag)</audio>
                     <div id="customPlayer">
                         <p onclick="back(this)" tabindex="0">↶</p>
-                        <p onclick="play(this)" tabindex="0"></p>
+                        <p onclick="play(this)" tabindex="0"> ▶ </p>
                         <p onclick="forward(this)" tabindex="0">↷</p>
                         <div>
-                            <input oninput="" type="range" min="0" max="100" value="0">
+                            <input oninput="setTime(this)" type="range" min="0" max="100" value="0">
                             <!-- <div class="sliderArea"></div> -->
                         </div>
                         <p>-00:00</p>
@@ -53,6 +53,28 @@
                 <img src="assets/thumbnails/episodeLogo.png" alt="Podcast Logo">
             </li>
             <li>
+                <div id="textWrapper">
+                    <p>Check out our sister channel</p>
+                    <p>We may only have a single episode but our sister channel also made an episode about the dark web.
+                        Have a listen!</p>
+                    <audio src="assets/tracks/Teknikenshistoria.m4a">Sorry, your browser doesn't support this
+                        feature
+                        (audio
+                        tag)</audio>
+                    <div id="customPlayer">
+                        <p onclick="back(this)" tabindex="0">↶</p>
+                        <p onclick="play(this)" tabindex="0"> ▶ </p>
+                        <p onclick="forward(this)" tabindex="0">↷</p>
+                        <div>
+                            <input oninput="setTime(this)" type="range" min="0" max="100" value="0">
+                            <!-- <div class="sliderArea"></div> -->
+                        </div>
+                        <p>-00:00</p>
+                    </div>
+                </div>
+                <img src="assets/thumbnails/caspar-camille-rubin-fPkvU7RDmCo-unsplash.jpg" alt="Podcast Logo">
+            </li>
+            <!-- <li>
                 <div id="textWrapper">
                     <p>Check out our sister channel</p>
                     <p>We may only have a single episode but our sister channel also made an episode about the dark web.
@@ -72,7 +94,7 @@
                     </div>
                 </div>
                 <img src="assets/thumbnails/caspar-camille-rubin-fPkvU7RDmCo-unsplash.jpg" alt="Laptop">
-            </li>
+            </li> -->
         </ul>
     </section>
 
