@@ -216,7 +216,7 @@ footer #socials a img:hover {
     border-radius: .7vw;
     height: .9rem;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -240,13 +240,15 @@ footer #socials a img:hover {
     border: 0;
 }
 
-#customPlayer .sliderArea {
+/* #customPlayer .sliderArea {
     position: relative;
     width: 50%;
-    background-color: #212121;
-    border-radius: 50%;
-    height: .9rem;
-}
+    background-color: #545454;
+    border-radius: .7vw;
+    height: .8rem;
+    margin: 0.1vh;
+    padding: 0;
+} */
 
 #customPlayer div span:first-of-type {
     flex: .2;
