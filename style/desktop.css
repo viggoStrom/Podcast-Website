@@ -19,6 +19,10 @@ a:hover {
     color: rgb(151, 151, 151);
 }
 
+#mobileOnly {
+    display: none;
+}
+
 header {
     display: flex;
     flex-flow: row nowrap;
@@ -50,7 +54,7 @@ header nav a {
     border-bottom: 2px solid white;
 }
 
-#newRelease {
+.newRelease {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -60,19 +64,19 @@ header nav a {
     gap: 4vw;
 }
 
-#newRelease #textWrapper {
+.newRelease #textWrapper {
     display: flex;
     flex-flow: column wrap;
     max-width: 38vw;
 }
 
-#newRelease #textWrapper h2 {
+.newRelease #textWrapper h2 {
     font-size: 1.4rem;
     font-weight: bolder;
     margin: 0;
 }
 
-#newRelease #textWrapper a {
+.newRelease #textWrapper a {
     background-color: white;
     color: #111111;
     width: max-content;
@@ -81,7 +85,7 @@ header nav a {
     border-radius: .7vw;
 }
 
-#newRelease img {
+.newRelease img {
     width: 30vw;
     min-width: 15rem;
     aspect-ratio: 1/1;

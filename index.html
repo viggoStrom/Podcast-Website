@@ -8,6 +8,7 @@
     <title>P0DCAST</title>
 
     <link rel="stylesheet" media="only screen and (min-width: 1026px)" href="style/desktop.css">
+    <link rel="stylesheet" media="only screen and (max-width: 1026px)" href="style/mobile.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,13 +30,23 @@
         </nav>
     </header>
 
-    <section id="newRelease">
+    <!-- desktop styling -->
+    <section class="newRelease" id="desktopOnly">
         <div id="textWrapper">
             <h2>Check out our first episode!</h2>
             <p>Join us as we discuss diffrent aspects of YouTube, like their history and their role in modern
                 society as a media giant with a practical monopoly.</p>
             <a href="episodes.html">Take me there</a>
         </div>
+        <img src="assets/thumbnails/episodeLogo.png" alt="P0DCAST logo">
+    </section>
+
+    <!-- mobile styling -->
+    <section class="newRelease" id="mobileOnly">
+        <h2>Check out our first episode!</h2>
+        <p>Join us as we discuss diffrent aspects of YouTube, like their history and their role in modern
+            society as a media giant with a practical monopoly.</p>
+        <a href="episodes.html">Take me there</a>
         <img src="assets/thumbnails/episodeLogo.png" alt="P0DCAST logo">
     </section>
 

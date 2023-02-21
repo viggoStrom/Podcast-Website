@@ -19,14 +19,18 @@ a:hover {
     color: rgb(151, 151, 151);
 }
 
+#desktopOnly {
+    display: none;
+}
+
 header {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
     padding: 1.2vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
+    padding-right: 0vw;
+    padding-left: 0vw;
 }
 
 header a h1 {
@@ -35,10 +39,10 @@ header a h1 {
 }
 
 header nav {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    gap: 3vw;
-    align-items: center;
+    justify-content: space-evenly;
     font-size: larger;
 }
 
@@ -50,43 +54,48 @@ header nav a {
     border-bottom: 2px solid white;
 }
 
-#newRelease {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 65vh;
-    margin-bottom: 20vh;
+.newRelease {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: min-content min-content min-content;
+    min-height: 70vh;
+    margin: 5vw;
+    margin-top: 10vh;
     gap: 4vw;
 }
 
-#newRelease #textWrapper {
-    display: flex;
-    flex-flow: column wrap;
-    max-width: 38vw;
-}
-
-#newRelease #textWrapper h2 {
+.newRelease h2 {
     font-size: 1.4rem;
     font-weight: bolder;
     margin: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+
+    grid-column: 1 / span 2;
 }
 
-#newRelease #textWrapper a {
+.newRelease a {
     background-color: white;
     color: #111111;
     width: max-content;
+    height: max-content;
     font-weight: bold;
-    padding: 1.8%;
-    border-radius: .7vw;
+    padding: 3%;
+    border-radius: 2vw;
+
+    justify-self: center;
+    grid-column: 1 / span 2;
+    grid-row: 3;
 }
 
-#newRelease img {
-    width: 30vw;
-    min-width: 15rem;
+.newRelease img {
+    width: 40vw;
+    height: 40vw;
     aspect-ratio: 1/1;
     border-radius: 50%;
     text-align: center;
+    align-self: center;
 }
 
 footer {
@@ -125,6 +134,7 @@ footer #socials a img:hover {
     width: 100%;
     margin: 0;
     margin-top: 2vh;
+    margin-bottom: 4vh;
     padding: 0;
     display: flex;
     flex-flow: column nowrap;
@@ -134,25 +144,25 @@ footer #socials a img:hover {
 #episodes ul li {
     background-color: #212121;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
     padding: 2%;
     margin: 2%;
-    max-width: 90vw;
-    min-width: max-content;
+    margin-bottom: 2vh;
+    width: 90vw;
     border-radius: 2rem;
     justify-content: space-between;
     align-items: center;
 }
 
 #episodes ul li #textWrapper {
-    max-width: 40vw;
     display: flex;
     flex-flow: column nowrap;
 }
 
-#episodes ul li p:nth-of-type(1) {
-    margin-top: 0;
+#episodes ul li p:first-of-type:not(#customPlayer p) {
+    margin: 0;
     font-size: larger;
+    text-align: center;
 }
 
 #episodes ul li #textWrapper audio {
@@ -162,11 +172,11 @@ footer #socials a img:hover {
 }
 
 #episodes ul li img {
-    width: 18vw;
-    height: 18vw;
+    width: 40vw;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     padding: 1%;
+    margin: 1 vh;
     text-align: center;
 }
 
@@ -175,14 +185,20 @@ footer #socials a img:hover {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+
     font-size: large;
     background-color: white;
-    padding: 2%;
-    margin: 1%;
-    margin-top: 5vh;
-    border-radius: 1vw;
     color: #111111;
     text-align: center;
+
+    padding: 2%;
+    margin: 1%;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+
+    border-radius: 3vw;
+
+    height: 3rem;
 }
 
 #customPlayer p {
@@ -190,17 +206,9 @@ footer #socials a img:hover {
     user-select: none;
 }
 
-#customPlayer p:nth-of-type(1) {
-    flex: 1;
-    font-weight: bolder;
-    font-size: larger;
-    cursor: pointer;
-    z-index: 99;
-}
-
 #customPlayer p:nth-of-type(2) {
-    flex: 1;
-    font-size: larger;
+    flex: 3;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -210,16 +218,24 @@ footer #socials a img:hover {
     scale: 1.4;
 }
 
-#customPlayer p:nth-of-type(3) {
-    flex: 1;
+#customPlayer p:nth-of-type(1) {
+    flex: 2;
     font-weight: bolder;
-    font-size: larger;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#customPlayer p:nth-of-type(3) {
+    flex: 2;
+    font-weight: bolder;
+    font-size: 2rem;
     cursor: pointer;
     z-index: 99;
 }
 
 #customPlayer div {
-    flex: 12;
+    flex: 10;
     text-align: start;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -277,10 +293,10 @@ footer #socials a img:hover {
 
 #about {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
     justify-content: center;
     align-items: center;
-    min-height: 65vh;
+    min-height: 60vh;
     margin-bottom: 20vh;
     gap: 4vw;
 }
@@ -288,13 +304,14 @@ footer #socials a img:hover {
 #about #textWrapper {
     display: flex;
     flex-flow: column wrap;
-    max-width: 38vw;
+    max-width: 90vw;
 }
 
 #about #textWrapper h2 {
     font-size: 1.8rem;
     font-weight: bolder;
     margin: 0;
+    text-align: center;
 }
 
 #about #textWrapper a {
@@ -311,4 +328,5 @@ footer #socials a img:hover {
     min-width: 15rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    margin-top: 5vh;
 }
