@@ -7,3 +7,6 @@ Hosted via [GitHub Pages](https://viggostrom.github.io/Podcast-Website/).
 
 ## Description
 This project was a collaborative effort I took part in, during the *applied programming* course at NTI Gymnasiet Uppsala. 
+
+## Technologies
+The project was built using HTML, CSS, and JavaScript.
